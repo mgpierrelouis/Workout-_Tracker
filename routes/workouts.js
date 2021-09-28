@@ -12,6 +12,15 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.get("/range", async (req, res) => {
+    try {
+        const workouts = await db.Workout.find({});
+        res.json(workouts)
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
+
 router.post("/", async (req, res) => {
 	try {
 		const workout = req.body;
