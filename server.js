@@ -4,7 +4,6 @@ const routes = require("./routes/index");
 const mongoose = require("mongoose");
 const htmlRoutes = require("./routes/htmlRoutes");
 
-// require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
 
