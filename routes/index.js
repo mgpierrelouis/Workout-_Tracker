@@ -1,9 +1,10 @@
-const express = require('express');
+const router = require("express").Router();
 
-const workoutsRoutes = require('./workouts');
+const apiRoutes = require('./api');
+const htmlRoutes = require('./htmlRoutes');
 
-const router = express.Router();
+router.use('/api', apiRoutes);
+router.use('/', htmlRoutes);
 
-router.use('/workouts', workoutsRoutes);
 
 module.exports = router;
